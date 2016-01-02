@@ -1,0 +1,34 @@
+#
+# .bashrc.load
+#
+# add this to the .bashrc: . $HOME/.bashrc.load
+
+export PATH=$PATH:$HOME/bin
+
+
+###################################################################
+#  add any bash customizations in here
+
+# source aliases if present
+if [ -f ~/.bash_aliases ]; then source ~/.bash_aliases; fi
+
+# source functions if present
+if [ -f ~/.bash_functions ]; then source ~/.bash_functions; fi
+
+#
+# if interactive session
+#
+
+if tty -s
+then
+
+   shopt -s checkwinsize
+
+   # source bash colors if present
+   if [ -f ~/.bash_colors ]; then source ~/.bash_colors; fi
+
+   # source bash prompt if present
+   if [ -f ~/.bash_prompt ]; then source ~/.bash_prompt; fi
+
+fi
+
