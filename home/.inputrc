@@ -10,5 +10,6 @@
 # .inputrc
 #
 
+# turn off stinking bell
 set bell-style none
 
